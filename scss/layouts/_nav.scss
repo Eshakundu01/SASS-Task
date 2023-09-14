@@ -1,0 +1,58 @@
+@use '../base' as *;
+
+.navbar {
+  background-color: $light-grey;
+}
+
+.main-navigation {
+  @include horizontal-listing;
+  align-items: center;
+}
+
+%nav-links {
+  display: block;
+  line-height: 4.1875rem;
+  padding: 0 0.625rem;
+}
+
+.main,
+.users {
+  font-family: $secondary-font;
+}
+
+.main {
+  @include horizontal-listing;
+  &__item {
+    a {
+      @extend %nav-links;
+      color: $grey;
+
+      &:hover {
+        color: $teal;
+      }
+    }
+  }
+
+  &__active a {
+    color: $yellow;
+  }
+}
+
+.main-logo {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.users {
+  @include horizontal-listing;
+  &__item {
+    a {
+      @extend %nav-links;
+      color: $grey;
+
+      &:hover {
+        color: $teal;
+      }
+    }
+  }
+}

@@ -1,0 +1,221 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Bebas";
+  src: url(../fonts/Bebas_Neue/BebasNeue-Regular.ttf);
+}
+@font-face {
+  font-family: "Lato";
+  src: url(../fonts/Lato/Lato-Regular.ttf);
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.navbar {
+  background-color: #ededed;
+}
+
+.main-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.users__item a, .main__item a {
+  display: block;
+  line-height: 4.1875rem;
+  padding: 0 0.625rem;
+}
+
+.main,
+.users {
+  font-family: "Lato";
+}
+
+.main {
+  display: flex;
+}
+.main__item a {
+  color: #666;
+}
+.main__item a:hover {
+  color: #007a82;
+}
+.main__active a {
+  color: #febb0c;
+}
+
+.main-logo {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.users {
+  display: flex;
+}
+.users__item a {
+  color: #666;
+}
+.users__item a:hover {
+  color: #007a82;
+}
+
+.field-area__item:nth-child(2n+4)::before, .field-area__item:nth-child(2n+3)::before {
+  content: "•";
+  font-weight: bold;
+  color: #febb0c;
+  font-size: 1.25rem;
+}
+
+.page,
+.about-blocks {
+  display: flex;
+}
+
+.banner {
+  background-color: #ededed;
+}
+
+.page-content-left {
+  padding-top: 3.125rem;
+}
+
+.page-content__tag {
+  color: #007a82;
+  position: relative;
+  font-weight: 900;
+  padding-left: 3.8rem;
+  font-family: "Lato";
+}
+.page-content__tag::before {
+  content: "";
+  border-bottom: 4px solid #febb0c;
+  position: absolute;
+  top: 0.563rem;
+  width: 40px;
+  left: 1.5px;
+}
+.page-content__title {
+  font-family: "Bebas";
+  font-size: 5.25rem;
+  color: #3d3d3d;
+  line-height: 5.5rem;
+  margin: 1.25rem 0;
+}
+.page-content__description {
+  font-family: "Lato";
+  font-size: 1.25rem;
+  color: #666;
+}
+
+.field-area {
+  column-count: 3;
+  display: inline-block;
+  margin: 1.25rem 0;
+  line-height: 2.25rem;
+}
+.field-area__item a {
+  font-family: "Lato";
+  color: #666;
+}
+.field-area__item a:hover {
+  opacity: 0.4;
+}
+.field-area__item:nth-child(2n+3)::before {
+  padding-right: 0.875rem;
+}
+.field-area__item:nth-child(2n+4)::before {
+  padding: 0 0.625rem 0 0.375rem;
+}
+
+.about-blocks {
+  margin: 0 8.25rem;
+  position: relative;
+  top: -3.75rem;
+}
+.about-blocks-item {
+  width: 25%;
+  padding: 0 0.3215rem;
+}
+.about-blocks-item-content {
+  box-shadow: 10px 5px 15px #ededed;
+  padding: 1.25rem;
+  background-color: #fff;
+}
+
+.about-blocks-contents {
+  border-bottom: 2px solid #febb0c;
+}
+.about-blocks-contents h3 {
+  font-family: "Bebas";
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #007a82;
+}
+.about-blocks-contents p {
+  font-family: "Lato";
+  font-size: 0.916rem;
+  color: #666;
+}
+
+.items {
+  display: block;
+}
+
+.about-blocks-item-content:hover {
+  background-color: #007a82;
+}
+.about-blocks-item-content:hover .about-blocks-contents h3 {
+  color: #febb0c;
+}
+.about-blocks-item-content:hover .about-blocks-contents p {
+  color: #fff;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 0.9375rem;
+  width: 75rem;
+}
+
+.btn, .users__item--btn a {
+  padding: 0.625rem 1.25rem;
+  color: #fff;
+  background-color: #007a82;
+  border-radius: 30px;
+}
+.btn:hover, .users__item--btn a:hover {
+  opacity: 0.8;
+  color: #febb0c;
+}
+
+.users__item--btn a {
+  display: inline;
+}
+
+.btn {
+  display: inline-block;
+  font-family: "Lato";
+}
