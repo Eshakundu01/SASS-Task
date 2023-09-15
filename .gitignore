@@ -1,0 +1,6 @@
+#Ignoring the images and fonts.
+/fonts
+/images
+
+#Ignoring node_modules that are required by gulp.
+/node_modules
