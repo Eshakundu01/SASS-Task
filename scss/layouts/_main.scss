@@ -1,0 +1,131 @@
+@use '../base' as *;
+
+%bullet {
+  content: "\2022";
+  font-weight: bold;
+  color: $yellow;
+  font-size: $primary-size;
+}
+
+.page,
+.about-blocks {
+  @include horizontal-listing;
+}
+
+.banner {
+  background-color: $light-grey;
+}
+
+.page-content-left {
+  padding-top: 3.125rem;
+}
+
+.page-content {
+  &__tag {
+    color: $teal;
+    position: relative;
+    font-weight: 900;
+    padding-left: 3.8rem;
+    font-family: $secondary-font;
+
+    &::before {
+      content: "";
+      border-bottom: 4px solid $yellow;
+      position: absolute;
+      top: 0.563rem;
+      width: 40px;
+      left: 1.5px;
+    }
+  }
+
+  &__title {
+    font-family: $head-font;
+    font-size: $title-size;
+    color: $black;
+    line-height: 5.5rem;
+    margin: 1.25rem 0;
+  }
+
+  &__description {
+    font-family: $secondary-font;
+    font-size: $primary-size;
+    color: $grey;
+  }
+}
+
+.field-area {
+  column-count: 3;
+  display: inline-block;
+  margin: 1.25rem 0;
+  line-height: 2.25rem;
+
+  &__item a {
+    font-family: $secondary-font;
+    color: $grey;
+
+    &:hover {
+      opacity: 0.4;
+    }
+  }
+
+  &__item:nth-child(2n+3)::before {
+    @extend %bullet;
+    padding-right: 0.875rem;
+  }
+
+  &__item:nth-child(2n+4)::before {
+    @extend %bullet;
+    padding: 0 0.625rem 0 0.375rem;
+  }
+}
+
+.about-blocks {
+  margin: 0 8.25rem;
+  position: relative;
+  top: -3.75rem;
+
+  &-item {
+    width: 25%;
+    padding: 0 0.3215rem;
+
+   &-content {
+    box-shadow: 10px 5px 15px $light-grey;
+    padding: 1.25rem;
+    background-color: $white;
+   }
+  }
+}
+
+.about-blocks-contents {
+  border-bottom: 2px solid $yellow;
+
+  h3 {
+    font-family: $head-font;
+    font-size: $block-head-size;
+    font-weight: 800;
+    color: $teal;
+  }
+
+  p {
+    font-family: $secondary-font;
+    font-size: $block-text-size;
+    color: $grey;
+  }
+}
+
+.items {
+  display: block;
+}
+
+.about-blocks-item-content:hover {
+  background-color: $teal;
+  .about-blocks-contents {
+    h3 {
+      color: $yellow;
+    }
+
+    p {
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+// The background colour of the site is defined.
+$light-grey: #ededed;
+
+// The colors used in the site.
+$teal: #007a82;
+$yellow: #febb0c;
+$black: #3d3d3d;
+$grey: #666;
+$white: #fff;
+
+//Fonts and font family
+@font-face {
+  font-family: "Bebas";
+  src: url(../fonts/Bebas_Neue/BebasNeue-Regular.ttf);
+}
+@font-face {
+  font-family: "Lato";
+  src: url(../fonts/Lato/Lato-Regular.ttf);
+}
+
+$head-font: "Bebas";
+$secondary-font: "Lato";
+$title-size: 5.25rem;
+$primary-size: 1.25rem;
+$block-head-size: 2.5rem;
+$block-text-size: 0.916rem;
